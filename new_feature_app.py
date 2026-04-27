@@ -135,7 +135,7 @@ except Exception as e:
 @st.cache_resource
 def init_duckdb():
     conn = duckdb.connect(database=":memory:")
-    df = pd.read_csv("accounts.csv")
+    df = pd.read_csv("data/accounts.csv")
     conn.execute("CREATE TABLE accounts AS SELECT * FROM df")
     return conn
 
