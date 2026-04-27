@@ -157,7 +157,7 @@ def haversine(lat1, lon1, lat2, lon2):
 accounts_df = conn.execute(
     """
     SELECT
-        account,
+        account_name,
         sector,
         city,
         state,
@@ -191,7 +191,7 @@ else:
     st.dataframe(
         results[
             [
-                "account",
+                "account_name",
                 "sector",
                 "city",
                 "state",
